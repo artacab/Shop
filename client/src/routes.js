@@ -1,9 +1,9 @@
 import Admin from "./pages/Admin";
-import Auth from "./pages/Auth";
+import {ADMIN_ROUTE, BASKET_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE} from "./utils/consts";
 import Basket from "./pages/Basket";
-import DevicePage from "./pages/DevicePage";
 import Shop from "./pages/Shop";
-import { ADMIN_ROUTE, DEVICE_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "./utils/consts";
+import Auth from "./pages/Auth";
+import DevicePage from "./pages/DevicePage";
 
 export const authRoutes = [
     {
@@ -11,18 +11,9 @@ export const authRoutes = [
         Component: Admin
     },
     {
-        path: LOGIN_ROUTE,
+        path: BASKET_ROUTE,
         Component: Basket
     },
-    {
-        path: REGISTRATION_ROUTE,
-        Component: Admin
-    },
-    {
-        path: DEVICE_ROUTE +'/:id',
-        Component: Basket
-    },
-
 ]
 
 export const publicRoutes = [
@@ -39,8 +30,7 @@ export const publicRoutes = [
         Component: Auth
     },
     {
-        path: DEVICE_ROUTE +'/:id',
+        path: DEVICE_ROUTE + '/:id',
         Component: DevicePage
     },
-
 ]
